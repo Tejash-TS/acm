@@ -1,0 +1,29 @@
+.team-img
+{
+	height:50px;
+	border-radius: 50%;
+}
+.img-name
+{
+	
+}
+
+.card-social
+{
+	position: absolute;
+	height:40px;
+	width:100px;
+	  
+	background-color:;
+	margin-top:-20px;
+	border-radius:25px;
+	
+	
+}
+.logo-footer
+{
+	position:relative;
+	size:40px;
+	z-index:1;
+	color:white;
+}

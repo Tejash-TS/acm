@@ -1,0 +1,207 @@
+
+
+
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 65px;
+    padding: 20px 5%;
+    background:rgba(7, 7, 7, 0.345); 
+    backdrop-filter: blur(10px);    
+   /* background-color:black;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+
+
+.logo{
+
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation .icon01 {
+    position: static;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+.navigation a{
+position: relative;
+font-size: 1.1em;
+color: skyblue;
+text-decoration: none;
+font-weight: 500;
+margin-left: 40px;
+}
+
+.navigation a::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: skyblue;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnlogin-popup {
+
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    /* transition: 1s;  */
+}
+
+.navigation .btnlogin-popup:hover {
+
+    background: #fff;
+    color: #162938;
+}
+
+
+.icon03 {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    
+}
+
+#check{
+    display: none;
+}
+
+/* brackpoint */
+
+@media (max-width: 1080px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .icon03{
+        display: inline-flex;
+    }
+
+    #check:checked~.icon03 #menu-icon {
+        display: none;
+    }
+    
+    .icon03 #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icon03 #close-icon {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+
+    }
+
+    #check:checked~.navigation {
+        height: 20.7rem;
+    }
+    
+    .navigation a{
+        display:block;
+        left: 40px;
+        padding: 0 30;
+        font-size: 1.4rem;
+        margin: 1.5rem 0;
+        transform: translateY(-50px);
+        transition: .3s ease;
+    }
+
+    .navigation a::after
+{
+    content: '';
+    position: relative;
+    left: 0;
+    bottom: -6px;
+    width:  10%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+    #check:checked~.navigation a {
+        transform: translateY(0);
+    }
+
+    .icon01{
+        position: fixed;
+        padding: 30 80;
+        display:none;
+        left: 0;
+        font-size: 1.5em;
+        color: #d2d8dc;
+        /* line-height: 50px; */
+        color: #fff;
+        text-align: top;
+    }
+    .btnlogin-popup{
+        position: fixed;
+        left: 0;
+        display: block;
+        transform: translateY(-0px);
+        transition: .3s ease;
+    }
+
+    #check:checked~.btnlogin-popup {
+        transform: translateY(0);
+    }
+
+}
+
+
+.snapshort
+{
+    height: 170px;
+}
+
+
+
+
